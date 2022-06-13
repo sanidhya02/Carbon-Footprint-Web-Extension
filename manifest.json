@@ -1,0 +1,16 @@
+
+{
+    "name": "Carbon footprint",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "co2.png"
+    },
+    "host_permissions": ["https://api.websitecarbon.com/site"],
+    "permissions": ["webRequest", "tabs","storage"],
+    "icons": {
+        "128": "co2.png"
+    }
+}
+
