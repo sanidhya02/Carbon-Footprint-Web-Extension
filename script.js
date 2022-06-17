@@ -25,15 +25,27 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 
       if (carbonText == true) {
         cleanElement.innerHTML = "Green";
-
         cleanElement.classList.add("green-text");
+        chrome.action.setIcon({
+          path: {
+            128: "green.png",
+          }      });
       } else if (carbonText == "unknown") {
         cleanElement.innerHTML = "Status is unkown for this";
         cleanElement.classList.add("unknown-text");
+        chrome.action.setIcon({
+          path: {
+            128: "yellow.png",
+          }      });
       } else if (carbonText == false) {
         cleanElement.innerHTML = "Not a green";
         cleanElement.classList.add("notgreen-text");
+        chrome.action.setIcon({
+          path: {
+            128: "red.png",
+          }      });
       }
+      
       function animateValue(obj, start, end, duration) {
         let startTimestamp = null;
         const step = (timestamp) => {
@@ -51,4 +63,6 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       const obj2 = document.getElementById("green-percetage");
       animateValue(obj2, 0, percent, 5000);
     });
+   
 });
+
