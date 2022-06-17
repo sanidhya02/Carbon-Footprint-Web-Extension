@@ -9,6 +9,8 @@
     },
     "host_permissions": ["https://api.websitecarbon.com/site"],
     "permissions": ["webRequest", "tabs","storage"],
+    "background": { "service": ["script.js"]},
+    
     "icons": {
         "128": "co2.png"
     }
